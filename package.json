@@ -1,0 +1,26 @@
+{
+  "name": "cse341-ww-student-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okakaabel/cse341-ww-Student-Code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okakaabel/cse341-ww-Student-Code/issues"
+  },
+  "homepage": "https://github.com/okakaabel/cse341-ww-Student-Code#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
