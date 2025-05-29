@@ -5,11 +5,10 @@
     "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3002",
+  "host": "cse341-project-crude.onrender.com/",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
@@ -37,17 +36,49 @@
     "/books/": {
       "post": {
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "bookName": {
+                  "example": "any"
+                },
+                "authorName": {
+                  "example": "any"
+                },
+                "ChaptersNumber": {
+                  "example": "any"
+                },
+                "bookcolor": {
+                  "example": "any"
+                },
+                "PublishedDate": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
-          "default": {
-            "description": ""
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "get": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -61,11 +92,38 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "bookName": {
+                  "example": "any"
+                },
+                "authorName": {
+                  "example": "any"
+                },
+                "ChaptersNumber": {
+                  "example": "any"
+                },
+                "bookcolor": {
+                  "example": "any"
+                },
+                "PublishedDate": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
-          "default": {
-            "description": ""
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -80,13 +138,19 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": ""
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "get": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -96,8 +160,8 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "OK"
           }
         }
       }
