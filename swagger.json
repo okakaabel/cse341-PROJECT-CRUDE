@@ -13,7 +13,9 @@
   ],
   "paths": {
     "/": {
-      "get": {
+      "get": {"tags": [
+          "Hello world"
+        ],
         "description": "",
         "responses": {
           "200": {
