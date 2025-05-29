@@ -12,23 +12,13 @@
   ],
   "paths": {
     "/": {
-      "get": {"tags": [
-          "Hello world"
-        ],
+      "get": {
+         "Tags":
+       ["Hello World"],
         "description": "",
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
           }
         }
       }
