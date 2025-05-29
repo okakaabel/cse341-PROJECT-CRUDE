@@ -1,8 +1,7 @@
 const express = require('express');
 const routes = require('express').Router();
 
-const booksControllers = require('./controllers/books');
-
+const booksControllers = require ('../Controllers/booksController.js')
 routes.post('/', booksControllers.createBook);
 routes.put ('/:id', booksControllers.updateBook);
 routes.delete ('/:id', booksControllers.deleteBook);

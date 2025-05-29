@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongodb = require('./data/database');
 const app = express();
 
-const port = 3002
+const port = 3005
 
 app.use (bodyParser.json());
 app.use((req, res, next) => {
