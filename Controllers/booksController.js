@@ -21,11 +21,11 @@ const getSingle =  async (req, res) => {
 
 const createBook = async (req, res) => {
    const book = {
-      bookName: req.body.bookName,
-      authorName: req.body.authorName,
-      ChaptersNumber:req.body.ChaptersNumber,
-      bookcolor:req.body.bookcolor,
-      PublishedDate:req.body.PublishedDate
+      book_Name: req.body.bookName,
+      author_Name: req.body.authorName,
+      Number_Chapters:req.body.ChaptersNumber,
+      book_color:req.body.bookcolor,
+      Published_Date:req.body.PublishedDate
    };
    const response = await mongodb.getDatabase().db().collection('books').insertOne(book);
    if (response.acknowledged) {
@@ -38,11 +38,11 @@ const createBook = async (req, res) => {
 const updateBook = async (req, res) =>  {
    const bookId = new ObjectId(req.params.id);
    const book = {
-      bookName: req.body.bookName,
-      authorName: req.body.authorName,
-      ChaptersNumber:req.body.ChaptersNumber,
-      bookcolor:req.body.bookcolor,
-      PublishedDate:req.body.PublishedDate
+      book_Name: req.body.bookName,
+      author_Name: req.body.authorName,
+      Number_Chapters:req.body.ChaptersNumber,
+      book_color:req.body.bookcolor,
+      Published_Date:req.body.PublishedDate
    };
    const response = await mongodb.getDatabase().db().collection('books').replaceOne({_id: bookId}, book);
    if (response.modifiedCount > 0) {
