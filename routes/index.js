@@ -37,5 +37,6 @@ routes.get('/logout', function (req, res, next) {
 });
 
 routes.use('/books', require('./books'));
+routes.use('/libraries', require('./libraries'));
 
 module.exports = routes;
