@@ -9,6 +9,12 @@ const cors = require('cors');
 
 const port = 3005
 
+// Environment variable check for robustness
+if (!process.env.GITHUB_CLIENT_ID || !process.env.GITHUB_CLIENT_SECRET || !process.env.CALLBACK_URL) {
+  console.error("❌ Missing GitHub OAuth environment variables.");
+  process.exit(1);
+}
+
 app.use (bodyParser.json());
 app
    .use( session({ 
@@ -67,6 +73,12 @@ app.get('/github/callback', passport.authenticate('github', {
         req.session.user = req.user;
         res.redirect('/');
     });
+
+// Global error handling middleware
+app.use((err, req, res, next) => {
+  console.error('Global error:', err.stack || err);
+  res.status(500).json({ error: 'Something went wrong on the server.' });
+});    
 mongodb.initDb((err) => {
     if (err) {
         console.log(err);
