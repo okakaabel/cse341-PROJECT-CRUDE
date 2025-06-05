@@ -9,6 +9,7 @@ const { isAuthenticated } = require('../milddleware/authenticate.js');
 const libraryValidationRules = [
   body('libraryName').notEmpty().withMessage('libraryName is required'),
   body('libraryOwner').notEmpty().withMessage('libraryOwner is required'),
+  body('libraryOpenHours').notEmpty().withMessage('libraryOpenHours is required')
 ];
 
 // Error handling middleware for validation
