@@ -5,7 +5,7 @@ routes.use('/', require('./swagger'));
 
 routes.get('/', (req, res) => {
   try {
-    res.send('Hello World');
+    res.send('Hello World 🥰🌄🌍');
   } catch (error) {
     console.error(error);
     res.status(500).send('Error loading root route.');

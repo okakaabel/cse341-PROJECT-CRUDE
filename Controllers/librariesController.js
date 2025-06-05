@@ -25,7 +25,10 @@ const createlibrary = async (req, res) => {
       library_Owner: req.body.libraryOwner,
       library_location:req.body.librarylocation,
       library_color:req.body.librarycolor,
-     library_Open_Hours:req.body.libraryOpenHours
+      library_established_Year : req.body.libraryEstablishedYear,
+      library_total_Books : req.body.libraryTotalBooks,
+      library_Open_Hours:req.body.libraryOpenHours,
+      library_Contact_Email: req.body.libraryContactEmail
    };
    const response = await mongodb.getDatabase().db().collection('libraries').insertOne(library);
    if (response.acknowledged) {
@@ -42,7 +45,10 @@ const updatelibrary = async (req, res) =>  {
       library_Owner: req.body.libraryOwner,
       library_location:req.body.librarylocation,
       library_color:req.body.librarycolor,
-      library_Open_Hours:req.body.libraryOpenHours
+      library_established_Year: req.body.libraryEstablishedYear,
+      library_total_Books : req.body.libraryTotalBooks,
+      library_Open_Hours:req.body.libraryOpenHours,
+      library_Contact_Email: req.body.libraryContactEmail
    };
    const response = await mongodb.getDatabase().db().collection('libraries').replaceOne({_id: libraryId}, library);
    if (response.modifiedCount > 0) {
