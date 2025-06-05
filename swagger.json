@@ -8,15 +8,15 @@
   "host": "localhost:3005",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/": {
       "get": {
-        "tags": [
+       "tags": [
           "Hello World"
-        ],
+         ],
         "description": "",
         "responses": {
           "200": {
