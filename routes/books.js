@@ -7,10 +7,8 @@ const { isAuthenticated } = require('../milddleware/authenticate.js');
 
 // Validation rules
 const bookValidationRules = [
-  body('title').notEmpty().withMessage('Title is required'),
-  body('author').notEmpty().withMessage('Author is required'),
-  body('publishedDate').optional().isISO8601().withMessage('Invalid date format'),
-  body('isbn').optional().isString(),
+  body('bookName').notEmpty().withMessage('bookName is required'),
+  body('authorName').notEmpty().withMessage('authorName is required'),
 ];
 
 // Error handling middleware for validation
