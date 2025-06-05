@@ -8,7 +8,6 @@
   "host": "cse341-project-crude.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
